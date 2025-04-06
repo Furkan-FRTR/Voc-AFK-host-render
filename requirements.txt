@@ -2,5 +2,4 @@ Flask
 requests
 websocket-client
 asyncio
-websocket
 websockets
