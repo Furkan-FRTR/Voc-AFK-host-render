@@ -24,6 +24,7 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
    - `CHANNEL_ID` : l'ID du salon vocal où le compte se connectera
 
 4. Dans le champ **Start Command**, entrez :
+
 python start.py
 Déployez votre service.
 
