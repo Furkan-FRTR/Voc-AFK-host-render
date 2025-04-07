@@ -31,7 +31,7 @@ Déployez votre service.
 
 ## Rester en ligne 24/7
 
-Pour que votre service reste actif en permanence, utilisez [Uptimerobot](https://uptimerobot.com/).  
+Pour que votre service reste actif en permanence, utilisez [Uptime Robot](https://uptimerobot.com/).  
 Configurez-le pour envoyer régulièrement des requêtes HTTP à votre URL Render.  
 Cela permet que votre service soit en fonctionnement continu.
 
