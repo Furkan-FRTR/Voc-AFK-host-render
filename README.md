@@ -26,6 +26,7 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
 4. Dans le champ **Start Command**, entrez :
 
 python start.py
+
 Déployez votre service.
 
 ⚠️ Attention : Ce script utilise un token utilisateur, ce qui est contre les règles de Discord. L'utilisation de ce script peut entraîner le bannissement de votre compte Discord. Utilisez-le à vos risques et périls.
