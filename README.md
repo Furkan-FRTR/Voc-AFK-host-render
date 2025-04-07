@@ -11,7 +11,7 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
 ## Installation
 
 1. Installez les fichiers du projet en les ajoutant un par un dans un repository GitHub.
-2. Assurez-vous que tous les fichiers nécessaires (comme `start.py`, `requirements.txt`, etc.) sont présents.
+2. Assurez-vous que tous les fichiers nécessaires (comme `start.py`, `requirements.txt`.) sont présents.
 
 ## Déploiement sur Render.com
 
