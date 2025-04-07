@@ -29,4 +29,10 @@ python start.py
 
 Déployez votre service.
 
+## Rester en ligne 24/7
+
+Pour que votre service reste actif en permanence, utilisez Uptime Robot.  
+Configurez-le pour envoyer régulièrement des requêtes HTTP à votre URL Render.  
+Cela permet que votre service soit en fonctionnement continu.
+
 ⚠️ Attention : Ce script utilise un token utilisateur, ce qui est contre les règles de Discord. L'utilisation de ce script peut entraîner le bannissement de votre compte Discord. Utilisez-le à vos risques et périls.
