@@ -12,7 +12,7 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
 
 1. Rendez-vous sur [Render.com](https://render.com) et connectez-vous ou inscrivez vous 
 2. Cliquez sur **Web Service** puis sélectionnez Public Git Repository
-3. Copier le lien de se Github [https://github.com/Furkan-FRTR/Voc-AFK-host-render]
+3. Copier le lien de se Github https://github.com/Furkan-FRTR/Voc-AFK-host-render
 4. Configurez les variables d'environnement dans Render :
 
    - `USERTOKEN` : le token utilisateur Discord
@@ -21,7 +21,7 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
 
 5. Dans le champ **Start Command**, entrez :
 
-[python start.py]
+(python start.py)c
 
 Déployez votre service.
 
