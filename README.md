@@ -8,24 +8,20 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
 - Reconnexion en cas d’expulsion
 - Serveur Flask pour hébergement sur Render.com
 
-## Installation
-
-1. Installez les fichiers du projet en les ajoutant un par un dans un repository GitHub.
-2. Assurez-vous que tous les fichiers nécessaires (comme `start.py`, `requirements.txt`.) sont présents.
-
 ## Déploiement sur Render.com
 
-1. Rendez-vous sur [Render.com](https://render.com) et connectez-vous en vous inscrivant via GitHub.
-2. Cliquez sur **Web Service** puis sélectionnez le repository que vous avez créé sur GitHub.
-3. Configurez les variables d'environnement dans Render :
+1. Rendez-vous sur [Render.com](https://render.com) et connectez-vous ou inscrivez vous 
+2. Cliquez sur **Web Service** puis sélectionnez Public Git Repository
+3. Copier le lien de se Github [https://github.com/Furkan-FRTR/Voc-AFK-host-render]
+4. Configurez les variables d'environnement dans Render :
 
    - `USERTOKEN` : le token utilisateur Discord
    - `GUILD_ID` : l'ID du serveur où vous souhaitez que le compte soit en mode vocal AFK
    - `CHANNEL_ID` : l'ID du salon vocal où le compte se connectera
 
-4. Dans le champ **Start Command**, entrez :
+5. Dans le champ **Start Command**, entrez :
 
-python start.py
+[python start.py]
 
 Déployez votre service.
 
