@@ -21,7 +21,7 @@ Ce projet a pour but de garder un compte Discord dans un salon vocal.
 
 5. Dans le champ **Start Command**, entrez :
 
-(python start.py)c
+python start.py
 
 Déployez votre service.
 
