@@ -10,7 +10,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# Variables d'environnement
 GUILD_ID = os.getenv("GUILD_ID")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
 USERTOKEN = os.getenv("USERTOKEN")
@@ -24,7 +23,6 @@ HEADERS = {
     "Content-Type": "application/json"
 }
 
-# Vérification du token utilisateur
 response = requests.get('https://discord.com/api/v9/users/@me', headers=HEADERS)
 if response.status_code != 200:
     print("[ERREUR] Token invalide.")
@@ -71,7 +69,6 @@ async def connect_voice():
 
                 await asyncio.sleep(2)
 
-                # Envoi du voice state update
                 await ws.send(json.dumps({
                     "op": 4,
                     "d": {
@@ -108,7 +105,6 @@ async def connect_voice():
             print(f"[ERREUR] WebSocket déconnecté : {e}. Nouvelle tentative dans 5 sec...")
             await asyncio.sleep(5)
 
-# Flask app pour ping uptime
 def start_flask():
     app.run(host="0.0.0.0", port=8080)
 
