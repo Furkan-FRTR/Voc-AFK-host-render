@@ -45,12 +45,15 @@ async def heartbeat(ws, interval):
 async def connect_voice():
     while True:
         try:
-            async with websockets.connect("wss://gateway.discord.gg/?v=9&encoding=json") as ws:
+            async with websockets.connect(
+                "wss://gateway.discord.gg/?v=9&encoding=json",
+                max_size=None
+            ) as ws:
+
                 hello = json.loads(await ws.recv())
                 heartbeat_interval = hello["d"]["heartbeat_interval"]
                 asyncio.create_task(heartbeat(ws, heartbeat_interval))
 
-                # Authentification
                 await ws.send(json.dumps({
                     "op": 2,
                     "d": {
