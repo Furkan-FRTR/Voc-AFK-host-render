@@ -82,16 +82,16 @@ async def connect_voice():
                     }
                 }))
 
-                print(f"Connecté en vocal en tant que {USERNAME}#{DISCRIMINATOR} ({USERID})")
+                print(f"[INFO] Connecté au salon vocal en tant que {USERNAME}#{DISCRIMINATOR} ({USERID})")
 
                 while True:
                     msg = await ws.recv()
                     data = json.loads(msg)
 
-                    if "t" in data and data["t"] == "VOICE_STATE_UPDATE":
-                        state = data["d"]
+                    if data.get("t") == "VOICE_STATE_UPDATE":
+                        state = data.get("d", {})
                         if state.get("user_id") == USERID and state.get("channel_id") is None:
-                            print("[INFO] Expulsé du vocal. Reconnexion...")
+                            print("[INFO] Expulsé du salon vocal. Tentative de reconnexion...")
                             await asyncio.sleep(2)
                             await ws.send(json.dumps({
                                 "op": 4,
@@ -102,11 +102,19 @@ async def connect_voice():
                                     "self_deaf": SELF_DEAF
                                 }
                             }))
-                            print("[INFO] Reconnexion envoyée.")
+                            print("[INFO] Reconnexion réussie.")
+
+                    if data.get("op") == 9:
+                        print("[ERREUR] Session invalide. Reconnexion complète...")
+                        break
 
         except Exception as e:
-            print(f"[ERREUR] WebSocket déconnecté : {e}. Nouvelle tentative dans 5 sec...")
+            print(f"[ERREUR] WebSocket déconnecté : {e}. Reconnexion dans 5 secondes...")
             await asyncio.sleep(5)
+
+@app.route("/")
+def home():
+    return "Bot Discord connecté et actif."
 
 def start_flask():
     app.run(host="0.0.0.0", port=8080)
